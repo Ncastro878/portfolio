@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Font awesome script-->
+        <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
+        <title>My Portfolio</title>
+
+    </head>
+    <body>
+
+      <nav class="nav">
+        <h2 class="nav__name">Nicholas Castro</h2>
+        <div class="nav__social-media-icons">
+          <a target="_blank" href="https://www.linkedin.com/in/nicholas-castro-988015143/" class="nav__social-media-icons--link"><i class="nav__social-media-icons--icon fab fa-linkedin-in"></i></a>
+          <a target="_blank" href="https://github.com/Ncastro878" class="nav__social-media-icons--link"><i class="nav__social-media-icons--icon fab fa-github"></i></a>
+          <a target="_blank" href="https://twitter.com/ncastro878" class="nav__social-media-icons--link"><i class="nav__social-media-icons--icon fab fa-twitter"></i></a>
+          <a target="_blank" href="https://play.google.com/store/apps/developer?id=Nicholas+Castro" class="nav__social-media-icons--link"><i class="nav__social-media-icons--icon fab fa-google-play"></i></a>
+        </div>
+
+        <div class="nav__personal-info">
+          <h3 class="nav__personal-info email"><i class="nav__personal-info--icon fas fa-at"></i>NCastro878@gmail.com</h3>
+          <h3 class="nav__personal-info phone-number"><i class="nav__personal-info--icon fas fa-phone"></i>940-257-4628</h3>
+        </div>
+      </nav>
+
+      <div class="container">
+
+        <div class="scroll-buttons scroll-buttons__up " onclick="scrollUp()"><i class="scroll-buttons__up--icon  fas fa-angle-double-up"></i></div>
+        <div class="scroll-buttons scroll-buttons__form" onclick="scrollToForm()"><i class="scroll-buttons__form--icon far fa-comment"></i></div>
+
+        <div class="heading-banner">
+          <div class="heading-banner__picture-container">
+            <img class="heading-banner__picture-container--nickpic" src="nick.jpeg" alt="">
+            <h3 class="heading-banner__picture-container--about">Nick Castro</h3>
+          </div>
+
+          <div class="heading-banner__selector">
+            <div class="heading-banner__selector--outer-container">
+            <div class="heading-banner__selector--container" id="header0">
+              <h4>Front-End Developer</h4>
+            </div>
+            <div class="heading-banner__selector--container" id="header1">
+                <h4>Back-End Enthusiast</h4>
+            </div>
+            <div class="heading-banner__selector--container" id="header2">
+                <h4>Android Developer</h4>
+            </div>
+            <div class="heading-banner__selector--container" id="header3">
+                <h4>Problem Solver</h4>
+            </div>
+            <div class="heading-banner__selector--container" id="header4">
+                <h4>Bad EDM Music Producer</h4>
+            </div>
+            <div class="heading-banner__selector--container" id="header5">
+                <h4>Non-Stop Learner</h4>
+            </div>
+            <div class="heading-banner__selector--container" id="header6">
+                <h4>Book Worm</h4>
+            </div>
+            <div class="heading-banner__selector--container" id="header7">
+                <h4>Non-Stop Learner</h4>
+            </div>
+          </div>
+          </div><!-- end of heading-banner__selector -->
+
+        </div><!-- end of .heading-banner -->
+
+        <div class="languages-banner">
+
+          <div class="languages-banner__header">Portfolio</div>
+          <div class="languages-banner__sub-header">(Click Logos for my projects)</div>
+
+           <div class="languages-banner__logo-row" id="logo-row">
+            <div onclick="logoClicked('android')" onmouseleave="mouseleft('android')" onmouseover="mouseover('android')" class="languages-banner__logo-row--box languages-banner__logo-row--box-android-logo">
+              <img class="languages-banner__logo-row--large languages-banner__logo-row--android" src="android-logo.svg" alt="android-logo">
+            </div>
+            <div onclick="logoClicked('html')" onmouseleave="mouseleft('html')" onmouseover="mouseover('html')" class="languages-banner__logo-row--box languages-banner__logo-row--box-double languages-banner__logo-row--box-html-logo">
+              <img class="languages-banner__logo-row--small languages-banner__logo-row--html5" src="html5-logo.svg" alt="html logo">
+              <img class="languages-banner__logo-row--small languages-banner__logo-row--css3" src="css3-logo.svg" alt="css logo">
+            </div>
+            <div onclick="logoClicked('node')" onmouseleave="mouseleft('node')" onmouseover="mouseover('node')" class="languages-banner__logo-row--box languages-banner__logo-row--box-nodejs-logo">
+              <img src="nodejs-logo.svg" alt="" class="languages-banner__logo-row--large languages-banner__logo-row--nodejs">
+            </div>
+            <div onclick="logoClicked('react')" onmouseleave="mouseleft('react')" onmouseover="mouseover('react')" class="languages-banner__logo-row--box languages-banner__logo-row--box-react-logo">
+              <img src="react-logo.svg" class="languages-banner__logo-row--large languages-banner__logo-row--react" alt="">
+            </div>
+          </div><!--end of .logo-row -->
+
+          <div class="languages-banner__portfolio-container">
+            <h1 id="html" class="languages-banner__portfolio-container--html languages-banner__portfolio-container--logo">HTML</h1>
+            <h1 id="node" class="languages-banner__portfolio-container--node languages-banner__portfolio-container--logo">NodeJs</h1>
+            <h1 id="android" class="languages-banner__portfolio-container--android languages-banner__portfolio-container--logo">Android</h1>
+            <h1 id="react" class="languages-banner__portfolio-container--react languages-banner__portfolio-container--logo">React</h1>
+          </div>
+
+          <div class="languages-banner__titles" >
+            <h2 id="react-title" class="languages-banner__title languages-banner__titles--react-title">ReactJS</h2>
+            <h2 id="node-title" class="languages-banner__title languages-banner__titles--node-title">JavaScript/NodeJS</h2>
+            <h2 id="html-title" class="languages-banner__title languages-banner__titles--html-title">HTML & CSS</h2>
+            <h2 id="android-title" class="languages-banner__title languages-banner__titles--android-title">Android</h2>
+          </div>
+        <div class="languages-banner__android-section--container" id="android-section">
+          <div class="languages-banner__android-section--index">
+            <ul class="languages-banner__android-section--index-list">
+              <li class="languages-banner__android-section--index-item"><a href="#android-section-2" class="languages-banner__android-section--index-link">Almost There</a></li>
+              <li class="languages-banner__android-section--index-item"><a href="#android-section-1" class="languages-banner__android-section--index-link">DropSpot</a></li>
+              <li class="languages-banner__android-section--index-item"><a href="#android-section-3" class="languages-banner__android-section--index-link">Wal-Mart Scanner</a></li>
+              <li class="languages-banner__android-section--index-item"><a href="#android-section-4" class="languages-banner__android-section--index-link">Book Inventory Scanner</a></li>
+            </ul>
+          </div>
+
+          <div class="languages-banner__android-section" id="android-section-1">
+            <div class="languages-banner__header"><h4>DropSpot Chat(Android)</h4></div>
+            <div class="languages-banner__media-container">
+              <div class="languages-banner__youtube-container">
+                <iframe class="languages-banner__youtube" width="560" height="315" src="https://www.youtube.com/embed/k4S4uw4eD9s" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+              </div>
+              <div class="languages-banner__big-img-container">
+                <div class="langauages-banner__img-container"><img class="languages-banner__img-container--img" src="img/dropspot_min.png" alt=""></div>
+                <div class="langauages-banner__img-container"><img class="languages-banner__img-container--img" src="img/dropspot_min2.png" alt=""></div>
+              </div>
+            </div><!-- end of languages-banner__media-container -->
+
+            <div class="languages-banner__text-container">
+              <div class="languages-banner__text-container--text">
+                This is my DropSpot Chat-app, a location and time-based chat app. A fun variation on socializing with people within your general vicinity.
+                <hr>
+                <div class="languages-banner__text-container--text2">
+                  Some Tools Used in building DropSpot Chat:
+                  <ul class="languages-banner__text-container--text-list">
+                    <li class="languages-banner__text-container--text-list-item">- Google Firebase Database for Android</li>
+                    <li class="languages-banner__text-container--text-list-item">- Android Location Request Library</li>
+                    <li class="languages-banner__text-container--text-list-item">- Android Components:Fragments, RecyclerView, ViewPager, & PagerAdapter</li>
+                    <li class="languages-banner__text-container--text-list-item">- GeoFire (Firebase-based library for datapoint creation)</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="languages-banner__text-container--text">The basic idea is you can create a chatroom at your physical location and a pin/chatroom will be created on the map at your gps-coordinates. However, a few restrictions apply: You can only join a chatroom if you are presently within 1-mile of where it is located(where it was created). Also, chatrooms will expire and delete 24 hours after creation. This app would be fun for social districts and areas such as festivals, downtown distrcts, college campuses, etc .I encourage you to watch my demonstration of it on Youtube.</div>
+            </div><!--end of .languages-banner__text-container -->
+            <div class="languages-banner__github-text">Source Code can be found on my <a target="_blank" href="https://github.com/Ncastro878/DropSpot" class="languages-banner__github-text--link">Github <i class="languages-banner__github-text--icon fab fa-github-square"></i></a></div>
+            <div class="languages-banner__playstore-text">Download the app on the <a target="_blank" href="https://play.google.com/store/apps/details?id=com.ncastro.android.firebasegps1" class="languages-banner__playstore-text--link">Google Playstore <i class="languages-banner__playstore-text--icon fab fa-google-play"></i></a></div>
+          </div><!--end of .languages-banner__android-section#1 -->
+
+          <div class="languages-banner__android-section" id="android-section-2">
+            <div class="languages-banner__header"><h4>Almost There (Android)</h4></div>
+            <div class="languages-banner__media-container">
+              <div class="languages-banner__youtube-container"><iframe class="languages-banner__youtube" width="560" height="315" src="https://www.youtube.com/embed/PlUR67pBY6s" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
+              <div class="languages-banner__big-img-container">
+                <div class="langauages-banner__img-container"><img class="languages-banner__img-container--img" src="img/almostthere_min.png" alt=""></div>
+                <div class="langauages-banner__img-container"><img class="languages-banner__img-container--img" src="img/almostthere_min2.png" alt=""></div>
+              </div>
+            </div><!--end of .languages-banner__media-container -->
+            <div class="languages-banner__text-container">
+              <div class="languages-banner__text-container--text">
+                This is my Almost There app. It is a Location-based automatic text-notification app. It's essentially a hands-free way of notifying someone you are almost to their location, or you're "Almost There".
+                <hr>
+                <div class="languages-banner__text-container--text2">
+                  Some Tools Used in building Almost There:
+                  <ul class="languages-banner__text-container--text-list">
+                    <li class="languages-banner__text-container--text-list-item">- OpenCageData GeoCoder API service</li>
+                    <li class="languages-banner__text-container--text-list-item">- Retrofit for Network calls to OpenCageData API</li>
+                    <li class="languages-banner__text-container--text-list-item">- Permission Request for Dangerous permissions(Read/Send SMS, Location Requests, Read Contacts)</li>
+                    <li class="languages-banner__text-container--text-list-item">- Using a foreground service(over a bounded/background service) to run Location updates/requests(on Main Thread), since location updates on background threads are heavily restricted with new Android Oreo update.</li>
+                    <li class="languages-banner__text-container--text-list-item">- Broadcast Receiver to read then send automatic text message replies with distance</li>
+                    <li class="languages-banner__text-container--text-list-item">- Notification Manager and Notifications.</li>
+                    <li class="languages-banner__text-container--text-list-item">- Shared Preferences</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="languages-banner__text-container--text">This idea came about after a new Texting & Driving law was passed in my city. My sister would ask for rides from work pretty often, & her location is actually a bad place to text and drive in due to traffic, but I also didn't like arriving and parking & waiting for her to finish her 10 minute conversations to come outside. How it works is, you merely enter in someone's address, phone number, and choose a distance(such as 1 mile). Now shutoff the screen, place your phone out of reach, & when you are within 1 mile of that address, your phone will automatically send a text message notifying the rider that you are "Almost There". The rider can also text the word "distance" to the driver's phone, which will cause the driver's phone to automatically respond with the driver's approximate distance( e.g. "Nick is currently 2.7 miles away").  I encourage you to watch my demonstration on Youtube.</div>
+            </div><!--end of .languages-banner__text-container -->
+            <div class="languages-banner__github-text">Source Code can be found on my <a target="_blank" href="https://github.com/Ncastro878/AlmostThere" class="languages-banner__github-text--link">Github <i class="languages-banner__github-text--icon fab fa-github-square"></i></a></div>
+            <div class="languages-banner__playstore-text">Download the app on the <a target="_blank" href="https://play.google.com/store/apps/details?id=com.nickrcastro.android.almostthere" class="languages-banner__playstore-text--link">Google Playstore <i class="languages-banner__playstore-text--icon fab fa-google-play"></i></a></div>
+          </div><!--end of .languages-banner__android-section#2 -->
+
+          <div class="languages-banner__android-section" id="android-section-3">
+            <div class="languages-banner__header"><h4>Book Inventory Scanner app (Android)</h4></div>
+            <div class="languages-banner__media-container">
+              <div class="languages-banner__youtube-container"><iframe class="languages-banner__youtube" width="560" height="315" src="https://www.youtube.com/embed/Fpn142vCXJw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
+              <div class="languages-banner__big-img-container">
+                <div class="langauages-banner__img-container"><img class="languages-banner__img-container--img" src="img/bookscanner_min.png" alt=""></div>
+                <div class="langauages-banner__img-container"><img class="languages-banner__img-container--img" src="img/bookscanner_min2.png" alt=""></div>
+              </div>
+            </div><!--end of .languages-banner__media-container -->
+            <div class="languages-banner__text-container">
+              <div class="languages-banner__text-container--text">
+                This is my Book ISBN Scanner Inventory app. This app is handy for quickly & easily scanning books into a personal inventory that will store the book's author, title, and image of the cover. It can easily be updated to store extra information such as publication date, page length, genre, etc. Currently talking to a book-store charity about creating a version for their large inventory of books that get donated to them daily, which would require a central online depository/database, and would not be difficult to build.
+                <hr>
+                <div class="languages-banner__text-container--text2">
+                  Some Tools Used in building Book ISBN Inventory Scanner:
+                  <ul class="languages-banner__text-container--text-list">
+                    <li class="languages-banner__text-container--text-list-item">- MVP Design Pattern</li>
+                    <li class="languages-banner__text-container--text-list-item">- XML Parsing</li>
+                    <li class="languages-banner__text-container--text-list-item">- AsyncTask(for background tasks)</li>
+                    <li class="languages-banner__text-container--text-list-item">- NetworkCalls ( HttpUrlConnection() )</li>
+                    <li class="languages-banner__text-container--text-list-item">- MySQL database</li>
+                    <li class="languages-banner__text-container--text-list-item">- Android Recyclerview for Efficient List Layout</li>
+                    <li class="languages-banner__text-container--text-list-item">- Picasso Image Library</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="languages-banner__text-container--text">This app was made for the very specific situation of having a large amount of books you want to inventory and no technology for doing so except a pen, paper, and a smartphone. With this app you can throw away the pen and paper, and with android phone in hand you can turn its camera into a scanner, & any book with an ISBN barcode (sorry, fans of old leather-bound books) can scan the barcode & add it to a personal database for reference. It relies on the API provided by GoodReads.com for fetching book details via HTTP GET requests, and converts the HTTP response from its XML format into a managable Java Object for storing into the MySQL database. </div>
+            </div><!--end of .languages-banner__text-container -->
+            <div class="languages-banner__github-text">Source Code can be found on my <a target="_blank" href="https://github.com/Ncastro878/LibraryScanner" class="languages-banner__github-text--link">Github <i class="languages-banner__github-text--icon fab fa-github-square"></i></a></div>
+            <div class="languages-banner__playstore-text">Download the app on the <a target="_blank" href="https://play.google.com/store/apps/details?id=com.ncastro.android.bookscanner" class="languages-banner__playstore-text--link">Google Playstore <i class="languages-banner__playstore-text--icon fab fa-google-play"></i></a></div>
+          </div><!--end of .languages-banner__android-section#3 -->
+
+          <div class="languages-banner__android-section" id="android-section-4">
+            <div class="languages-banner__header"><h4>WalMart Scanner app (Android)</h4></div>
+            <div class="languages-banner__media-container">
+              <div class="languages-banner__youtube-container"><iframe class="languages-banner__youtube" width="560" height="315" src="https://www.youtube.com/embed/DUMAX8sF4Ks" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
+              <div class="languages-banner__big-img-container">
+                <div class="langauages-banner__img-container"><img class="languages-banner__img-container--img" src="img/walmart_min.png" alt=""></div>
+                <div class="langauages-banner__img-container"><img class="languages-banner__img-container--img" src="img/walmart_min2.png" alt=""></div>
+              </div>
+            </div><!--end of .languages-banner__media-container -->
+            <div class="languages-banner__text-container">
+              <div class="languages-banner__text-container--text">
+                This is my WalMart Scanner App. This app was a fun build with a very practical use in developing it; it's used for keeping tracking of how much money you're spending as you shop at Wal-Mart to stay underneath your budget.
+                <hr>
+                <div class="languages-banner__text-container--text2">
+                  Some Tools/Concepts Used in building the Walmart Scanner App:
+                  <ul class="languages-banner__text-container--text-list">
+                    <li class="languages-banner__text-container--text-list-item">- WalMart's Open API (still in beta)</li>
+                    <li class="languages-banner__text-container--text-list-item">- HTTP GET Requests</li>
+                    <li class="languages-banner__text-container--text-list-item">- Conversion from JSON format to Java Objects</li>
+                    <li class="languages-banner__text-container--text-list-item">- Android HttpUrlConnection for Nework calls</li>
+                    <li class="languages-banner__text-container--text-list-item">- Android RecyclerView for List Layout</li>
+                    <li class="languages-banner__text-container--text-list-item">- MySQL database</li>
+                   </ul>
+                </div>
+              </div>
+              <div class="languages-banner__text-container--text">Thanks to Wal-Mart developing their Open API, giving developers access to their product database, I was able to make a handy app for helping manage financial habits when shopping at Wal-Mart. This app which accesses an API utilizes HTTP requests and response processing(using Android's HttpUrlConnection networking class). The response data from Wal-Mart's end is in JSON format, which is converted into a managable Java Object. All the saved Wal-Mart products are saved in an Android MySQLite database on the phone's memory. Possibly because Wal-Mart's Open API is still in beta, some of the return results don't match in price to the physical store's price, or sometimes no product is found. </div>
+            </div><!--end of .languages-banner__text-container -->
+            <div class="languages-banner__github-text">Source Code can be found on my <a target="_blank" href="https://github.com/Ncastro878/WalmartScanner" class="languages-banner__github-text--link">Github <i class="languages-banner__github-text--icon fab fa-github-square"></i></a></div>
+            <div class="languages-banner__playstore-text">Download the app on the <a target="_blank" href="https://play.google.com/store/apps/details?id=com.ncastro.android.walmartscannerapp" class="languages-banner__playstore-text--link">Google Playstore <i class="languages-banner__playstore-text--icon fab fa-google-play"></i></a></div>
+          </div><!--end of .languages-banner__android-section#4 -->
+        </div><!--end of .languages-banner__android-section-container -->
+
+          <div class="languages-banner__html-section" id="html-section">
+            <div class="languages-banner__html-section--double-container">
+              <div class="languages-banner__html-section--html-item">
+                <h1 class="languages-banner__html-section--html-header">NorthTexasFootClinic.com (HTML/CSS/SASS)</h1>
+                <div class="languages-banner__html-section--img-container">
+                  <img src="img/ntfc__screenshot1.png" alt="" class="languages-banner__html-section--html-img-comp">
+                  <img src="img/ntfc__screenshot2.png" alt="" class="languages-banner__html-section--html-img-phone">
+                </div><!-- end of .languages-banner__html-section--img-container-->
+                <div class="languages-banner__html-section--text-container">
+                  For this project I teamed up with my friend who handles SEO/AdWords. I was the web development half of helping generate this local podiatrist's web presence. We stepped away from his previous wordpress-based site and developed a custom and responsive theme, which he was very happy with and thanked us for reigniting his business. What was important was to implement his online-appointment portal as well as an easy Phone-Dial button for conversion. <span class="highlight"> This was built with pure HTML, CSS, JavaScript, and SASS(via its Node.js library) in a NodeJS/NPM environment.</span>
+                </div>
+                <h2 class="languages-banner__html-section--html-header">Vist at <a class="languages-banner__html-section--link" target="_blank" href="https://www.NorthTexasFootClinic.com">www.NorthTexasFootClinic.com</a></h2>
+              </div><!-- end of ..languages-banner__html-section--html-itm-->
+              <div class="languages-banner__html-section--html-item">
+                <h1 class="languages-banner__html-section--html-header">EvolvedFitnessNation.com (HTML/CSS/SASS)</h1>
+                <div class="languages-banner__html-section--img-container">
+                  <img src="img/evolvedfitness1.png" alt="" class="languages-banner__html-section--html-img-comp">
+                  <img src="img/evolvedfitness2.png" alt="" class="languages-banner__html-section--html-img-phone">
+                </div><!-- end of .languages-banner__html-section--img-container-->
+                <div class="languages-banner__html-section--text-container">
+                 Here I was contacted by a local Social Media Agency to build a Landing Page type site for a local Personal Trainer's new solo business. This site required a professional modern look to divert new customers to his free consultation form, and of course making it <span class="highlight"> Responsive</span>. This was one step in him building his brand and online presence. He was ecstatic about the finished product and our future work together. <span class="highlight"> This was built with pure HTML, CSS, JavaScript, and SASS(via its Node.js library) in a NodeJS/NPM environment.</span>
+                </div>
+                <h2 class="languages-banner__html-section--html-header">Vist at <a class="languages-banner__html-section--link" target="_blank" href="https://www.EvolvedFitnessNation.com">www.EvolvedFitnessNation.com</a></h2>
+
+              </div><!-- end of ..languages-banner__html-section--html-itm-->
+            </div><!--end of .languages-banner__html-section--double-container -->
+
+            <div class="languages-banner__html-section--double-container">
+              <div class="languages-banner__html-section--html-item">
+                <h1 class="languages-banner__html-section--html-header">PatsDriveInn (Domain Purchase Pending) (HTML/CSS/SASS)</h1>
+                <h2 class="languages-banner__html-section--html-header">In Development - (visit www.NCastro.me/burgers for current progress)</h2>
+
+                <div class="languages-banner__html-section--img-container2">
+                  <img src="img/pats1.png" alt="" class="languages-banner__html-section--html-img-comp">
+                  <img src="img/pats2.png" alt="" class="languages-banner__html-section--html-img-comp">
+                </div><!-- end of .languages-banner__html-section--img-container-->
+                <div class="languages-banner__html-section--text-container">
+                  This project is currently midway through development for a local Old Fashioned Burger joint. They currently have no website and I am helping them fill in a gap in their online presence. They have received good reviews on Yelp and Trip Advisor so I made it a point to highlight some favorable reviews and link to their existing online profiles. Designing the Responsive Layout is next on the list, as well as adding a fixed link for calling in orders from the home screen. <span class="highlight"> This was built with pure HTML, CSS, JavaScript, and SASS(via its Node.js library) in a NodeJS/NPM environment.</span>
+                </div>
+                <h2 class="languages-banner__html-section--html-header">View Progress <a class="languages-banner__html-section--link" target="_blank" href="https://www.Ncastr.me/burgers">www.NCastro.me/Burgers</a></h2>
+              </div><!-- end of ..languages-banner__html-section--html-itm-->
+              <div class="languages-banner__html-section--html-item">
+                <h1 class="languages-banner__html-section--html-header">NCastro.me (HTML/CSS/SASS)</h1>
+                <div class="languages-banner__html-section--img-container2">
+                  <img src="img/portfolio1.png" alt="" class="languages-banner__html-section--html-img-comp">
+                  <img src="img/portfolio2.png" alt="" class="languages-banner__html-section--html-img-comp">
+                </div><!-- end of .languages-banner__html-section--img-container-->
+                <div class="languages-banner__html-section--text-container">
+                  This project was developed for a very Talented, Hard-Working, and Handsome local Developer to showcase his list of great projects (lol). Like all websites Responsiveness is a must these days. I added a few cute CSS tricks, such as a parallax image, slideshow, interactive category selection, which all utilized pure CSS/SASS and Vanilla Javascript. I'm very happy with the color scheme I chose, but think it can still be improved. <span class="highlight"> This was built with pure HTML, CSS, JavaScript, and SASS(via its Node.js library) in a NodeJS/NPM environment.</span>
+                </div>
+                <h2 class="languages-banner__html-section--html-header">Vist at - <a class="languages-banner__html-section--link" target="_blank" href="https://www.NCastro.me">You're already here!</a></h2>
+
+              </div><!-- end of ..languages-banner__html-section--html-itm-->
+            </div><!--end of .languages-banner__html-section--double-container -->
+          </div><!-- end of .languages-banner__html-section -->
+
+          <div class="languages-banner__react-section" id="react-section">
+            <div class="languages-banner__react-section--react-item">
+              <h1 class="languages-banner__react-section--react-header">DropSpot Chat Web App Version</h1>
+              <div class="languages-banner__react-section--img-container">
+                <div class="languages-banner__react-section--img-container"><img src="img/dropspotchat_snapshot.png" alt="" class="languages-banner__react-section--img"></div>
+                <div class="languages-banner__react-section--img-container"><img src="img/dropspotchat2.png" alt="" class="languages-banner__react-section--img"></div>
+              </div>
+              <div class="languages-banner__react-section--text">This is the Web App Version of my DropSpot Android Chat App. This functions the exact same way as the android version only for Browsers. It's modeled as a Single Page App built with <span class="colorize">ReactJS as the front end framework</span>, <span class="colorize">React-Router as the login library</span>, & of course <span class="colorize">Google's Firebase platform as the backend</span>. It was initially styled with MaterialCSS a CSS-framework similar to Bootstrap. I'm currently <span class="colorize">in the process of </span>overhauling the layout and <span class="colorize">designing it with pure CSS via SASS(css pre-processer)</span>. This React app was <span class="colorize">deployed on Heroku's Cloud Platform</span>, but on the free-tier, so initial load time may be slow.</div>
+              <h2 class="languages-banner__react-section--html-header">Vist at - <a class="languages-banner__react-section--link" target="_blank" href="https://www.DropSpot.club">www.DropSpot.club</a></h2>
+
+            </div><!--end of .languages-banner__react-section--react-item -->
+            <div class="languages-banner__react-section--react-item">
+              <h1 class="languages-banner__react-section--react-header">QuoteBook Web App (& Chrome Extension)</h1>
+              <div class="languages-banner__react-section--img-container">
+                <div class="languages-banner__react-section--img-container"><img src="img/quotebook_snapshot.png" alt="" class="languages-banner__react-section--img"></div>
+                <div class="languages-banner__react-section--img-container"><img src="img/quotebook_extension.png" alt="" class="languages-banner__react-section--img2"></div>
+              </div>
+              <div class="languages-banner__react-section--text">This is another Single Page app built on the <span class="colorize">React Framework</span>. It functions as a central open repository for people to submit their favorite Quotes by entering the author, entering the quote, and a choosing a color representing the category. I have also made a <span class="colorize">Chrome Extension</span> from which people can submit quotes on the fly which I will submit to the Chrome Store for fun. This app, too, was built on the <span class="colorize">React Framework & styled with MaterializeCSS(CSS-framework)</span>, which I am <span class="colorize">redesigning via pure CSS/SASS</span>. However, the backend for this project is a <span class="colorize">NodeJS Express Server</span> which is connected to a <span class="colorize">MongoDB Database hosted on www.MLab.com</span>. Both the React Front-End & NodeJS/Express Back end were <span class="colorize"> deployed to Heroku's Cloud platform.</span>  </div>
+              <h2 class="languages-banner__react-section--html-header">Vist at - <a class="languages-banner__react-section--link" target="_blank" href="https://www.QuoteBook.club">www.QuoteBook.club</a></h2>
+            </div><!--end of.languages-banner__react-section--react-item -->
+          </div><!-- end of .languages-banner__react-section -->
+
+          <div class="languages-banner__javascript-section" id="javascript-section">
+            <h1 class="languages-banner__javascript-section--header">JavaScript & Node.JS</h1>
+            <div class="languages-banner__javascript-section--text">
+              All Websites I've created(built in HTML, CSS, React, ExpressJS) were developed in the Node Development Environment making use of NPM(Node Package Manager) & various Node Packages, Scripts, & tools to develop them, and Vanilla Javascript was used for for various html manipulation and effects.
+            </div>
+            <div class="languages-banner__javascript-section--text">Some of my most used NPM Packages inlude: "live-server", "node-sass", "npm-run-all", "express", "lodash", "create-react-app"</div>
+          </div><!-- end of .languages-banner__javascript-section -->
+        </div><!--end of languages banner-->
+
+        <div class="form-banner">
+          <h1 class="form-banner__header">Have a Project? Contact Me & Let's Build it</h1>
+          <div class="form-banner__container">
+            <!-- formspree form, just change the email and confirm first one-->
+            <form class="form-banner__container--form" id="my_form" action="https://formspree.io/ncastro878@gmail.com" method="POST">
+              <label class="form-banner__container--label" for="name_input">Name:</label>
+              <input class="form-banner__container--input" type="text" id="name_input" name="name">
+              <label class="form-banner__container--label" for="email_input">E-Mail:</label>
+              <input class="form-banner__container--input" type="email" id="email_input" name="_replyto">
+              <!--
+              <label class="form-banner__container--label" for="dropdown">Project Type:</label>
+              <select class="form-banner__container--input" id="dropdown" name="dropdown">
+                <option value="">------</option>
+                <option value="">Website</option>
+                <option value="">Mobile-App</option>
+              </select> -->
+              <label class="form-banner__container--label" for="comments">Project Information:</label>
+              <textarea class="form-banner__container--input" id="comments" name="comment" rows="8" cols="80"></textarea>
+              <input class="form-banner__container--btn" type="submit" id="send_input" value="Send">
+            </form>
+          </div>
+
+          <div class="contact-banner">
+            <h1 class="contact-banner__header">Or Contact Me Via:</h1>
+            <ul class="contact-banner__contact-list">
+              <li class="contact-banner__contact-list--item"><a href="" class="contact-banner__link"><i class="contact-banner__icon fas fa-envelope-square"></i> NCastro878@Gmail.com</a></li>
+              <li class="contact-banner__contact-list--item"><a href="https://www.facebook.com/profile.php?id=100007544026305" class="contact-banner__link"><i class="contact-banner__icon fab fa-facebook"></i> Facebook</a></li>
+              <li class="contact-banner__contact-list--item"><a href="https://www.linkedin.com/in/nicholas-castro-988015143/" class="contact-banner__link"><i class="contact-banner__icon fab fa-linkedin"></i> Linkedin</a></li>
+              <li class="contact-banner__contact-list--item"><a href="https://twitter.com/ncastro878" class="contact-banner__link"><i class="contact-banner__icon fab fa-twitter-square"></i> Twitter</a></li>
+            </ul>
+
+          </div>
+
+        </div>
+
+        <footer class="footer">
+          <div class="footer__text">Site Designed & Built by Nicholas Castro | 2018 | code found @ Github</div>
+        </footer>
+      </div><!--end of .container -->
+
+<script type="text/javascript">
+function mouseleft(type) {
+	console.log("mouse has left the building");
+	var element = document.getElementById(type + "-title");
+	element.classList.remove("inview");
+}
+function mouseover(type) {
+	var element = document.getElementById(type + "-title");
+	element.classList.add("inview");
+}
+function logoClicked(logo){
+  /* we can take out these pop-up category titles
+  console.log(logo);
+  var el = document.getElementById(logo);
+  var elements = document.getElementsByClassName('languages-banner__portfolio-container--logo');
+  for(var i = 0; i < elements.length; i++){
+    elements[i].style.display = 'none';
+  }
+  el.style.display = 'block';
+  */
+  if(logo === "android"){
+    document.getElementById('android-section').style.display = "flex";
+    document.getElementById('html-section').style.display = "none";
+    document.getElementById('react-section').style.display = "none";
+    document.getElementById('javascript-section').style.display = "none";
+    console.log("android clicked");
+  }else if (logo === "html"){
+    document.getElementById('android-section').style.display = "none";
+    document.getElementById('html-section').style.display = "flex";
+    document.getElementById('react-section').style.display = "none";
+    document.getElementById('javascript-section').style.display = "none";
+  }else if (logo === "react"){
+    document.getElementById('android-section').style.display = "none";
+    document.getElementById('html-section').style.display = "none";
+    document.getElementById('react-section').style.display = "flex";
+    document.getElementById('javascript-section').style.display = "none";
+  }else if(logo === "node"){
+    document.getElementById('android-section').style.display = "none";
+    document.getElementById('html-section').style.display = "none";
+    document.getElementById('react-section').style.display = "none";
+    document.getElementById('javascript-section').style.display = "flex";
+  }
+
+}
+var slideIndex = 0;
+carousel();
+function carousel(){
+  var i;
+  var x = document.getElementsByClassName('heading-banner__selector--container');
+  for(i = 0; i < x.length; i++){
+    //x[i].style.display = "none";
+    x[i].style.opacity = 0;
+  }
+  slideIndex++;
+  if(slideIndex > x.length){
+    slideIndex = 1;
+  }
+  x[slideIndex - 1].style.opacity = 1;
+  //x[slideIndex - 1].style.display = "block";
+  setTimeout(carousel, 3000);
+}
+function scrollUp(){
+  //for Safari
+    //document.body.scrollTop = 0;
+  //for Chrome, Firefox, Opera, IE
+    //document.documentElement.scrollTop = 100;
+   var el = document.getElementById('logo-row');
+   var rect = el.getBoundingClientRect();
+   console.log(rect);
+   el.scrollIntoView({block: "center"});
+}
+function scrollToForm(){
+  document.getElementById('my_form').scrollIntoView({block:"center"});
+}
+
+</script>
+
+    </body>
+</html>

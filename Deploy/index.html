@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Font awesome script-->
+        <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
+        <title>My Portfolio</title>
+
+    </head>
+    <body>
+
+      <nav class="nav">
+        <h2 class="nav__name">Nicholas Castro</h2>
+        <div class="nav__social-media-icons">
+          <a href="#" class="nav__social-media-icons--link"><i class="nav__social-media-icons--icon fab fa-linkedin-in"></i></a>
+          <a href="#" class="nav__social-media-icons--link"><i class="nav__social-media-icons--icon fab fa-github"></i></a>
+          <a href="#" class="nav__social-media-icons--link"><i class="nav__social-media-icons--icon fab fa-twitter"></i></a>
+          <a href="#" class="nav__social-media-icons--link"><i class="nav__social-media-icons--icon fab fa-google-play"></i></a>
+        </div>
+
+        <div class="nav__personal-info">
+          <h3 class="nav__personal-info email"><i class="nav__personal-info--icon fas fa-at"></i>NCastro878@gmail.com</h3>
+          <h3 class="nav__personal-info phone-number"><i class="nav__personal-info--icon fas fa-phone"></i>940-257-4628</h3>
+        </div>
+      </nav>
+
+      <div class="container">
+
+        <div class="heading-banner">
+          <div class="heading-banner__picture-container">
+            <img class="heading-banner__picture-container--nickpic" src="nick.jpeg" alt="">
+            <h3 class="heading-banner__picture-container--about">Nick Castro</h3>
+          </div>
+
+          <div class="heading-banner__selector">
+            <div class="heading-banner__selector--container">
+                <h4>Languages/Focus</h4>
+            </div>
+            <div class="heading-banner__selector--container">
+                <h4>Services</h4>
+            </div>
+          </div>
+
+
+
+        </div><!-- end of .heading-banner -->
+
+        <div class="languages-banner">
+
+          <div class="languages-banner__header">Portfolio</div>
+
+           <div class="languages-banner__logo-row">
+            <div onclick="logoClicked('android')" onmouseleave="mouseleft('android')" onmouseover="mouseover('android')" class="languages-banner__logo-row--box languages-banner__logo-row--box-android-logo">
+              <img class="languages-banner__logo-row--android" src="android-logo.svg" alt="android-logo">
+            </div>
+            <div onclick="logoClicked('html')" onmouseleave="mouseleft('html')" onmouseover="mouseover('html')" class="languages-banner__logo-row--box languages-banner__logo-row--box-double languages-banner__logo-row--box-html-logo">
+              <img class="languages-banner__logo-row--html5" src="html5-logo.svg" alt="html logo">
+              <img class="languages-banner__logo-row--css3" src="css3-logo.svg" alt="css logo">
+            </div>
+            <div onclick="logoClicked('node')" onmouseleave="mouseleft('node')" onmouseover="mouseover('node')" class="languages-banner__logo-row--box languages-banner__logo-row--box-nodejs-logo">
+              <img src="nodejs-logo.svg" alt="" class="languages-banner__logo-row--nodejs">
+            </div>
+            <div onclick="logoClicked('react')" onmouseleave="mouseleft('react')" onmouseover="mouseover('react')" class="languages-banner__logo-row--box languages-banner__logo-row--box-react-logo">
+              <img src="react-logo.svg" class="languages-banner__logo-row--react" alt="">
+            </div>
+          </div><!--end of .logo-row -->
+
+          <div class="languages-banner__portfolio-container">
+            <h1 id="html" class="languages-banner__portfolio-container--html languages-banner__portfolio-container--logo">HTML</h1>
+            <h1 id="node" class="languages-banner__portfolio-container--node languages-banner__portfolio-container--logo">NodeJs</h1>
+            <h1 id="android" class="languages-banner__portfolio-container--android languages-banner__portfolio-container--logo">Android</h1>
+            <h1 id="react" class="languages-banner__portfolio-container--react languages-banner__portfolio-container--logo">React</h1>
+          </div>
+
+          <div class="languages-banner__titles">
+            <h2 id="react-title" class="languages-banner__title languages-banner__titles--react-title">ReactJS</h2>
+            <h2 id="node-title" class="languages-banner__title languages-banner__titles--node-title">JavaScript/NodeJS</h2>
+            <h2 id="html-title" class="languages-banner__title languages-banner__titles--html-title">HTML & CSS</h2>
+            <h2 id="android-title" class="languages-banner__title languages-banner__titles--android-title">Android</h2>
+          </div>
+        </div>
+
+        <div class="form-banner">
+          <h1 class="form-banner__header">Have a Project? Contact Me & Let's Build it</h1>
+          <div class="form-banner__container">
+            <!-- formspree form, just change the email and confirm first one-->
+            <form class="form-banner__container--form" action="https://formspree.io/ncastro878@gmail.com" method="POST">
+              <label class="form-banner__container--label" for="name_input">Name:</label>
+              <input class="form-banner__container--input" type="text" id="name_input" name="name">
+              <label class="form-banner__container--label" for="email_input">E-Mail:</label>
+              <input class="form-banner__container--input" type="email" id="email_input" name="_replyto">
+              <label class="form-banner__container--label" for="dropdown">Project Type:</label>
+              <select class="form-banner__container--input" id="dropdown" name="dropdown">
+                <option value="">------</option>
+                <option value="">Website</option>
+                <option value="">Mobile-App</option>
+              </select>
+              <label class="form-banner__container--label" for="comments">Project Information:</label>
+              <textarea class="form-banner__container--input" id="comments" name="comment" rows="8" cols="80"></textarea>
+              <input class="form-banner__container--btn" type="submit" id="send_input" value="Send">
+            </form>
+          </div>
+
+          <div class="contact-banner">
+            <h1 class="contact-banner__header">Or Contact Me Thru These:</h1>
+
+          </div>
+
+        </div>
+
+        <footer class="footer">
+          <h1 class="footer">Site Designed & Built by Nicholas Castro | 2018 | code found @ Github</h1>
+        </footer>
+      </div><!--end of .container -->
+
+<script type="text/javascript">
+function mouseleft(type) {
+	console.log("mouse has left the building");
+	var element = document.getElementById(type + "-title");
+	element.classList.remove("inview");
+}
+function mouseover(type) {
+	var element = document.getElementById(type + "-title");
+	element.classList.add("inview");
+}
+function logoClicked(logo){
+  console.log(logo);
+  var el = document.getElementById(logo);
+  var elements = document.getElementsByClassName('languages-banner__portfolio-container--logo');
+  for(var i = 0; i < elements.length; i++){
+    elements[i].style.display = 'none';
+  }
+
+  el.style.display = 'block';
+}
+</script>
+
+    </body>
+</html>

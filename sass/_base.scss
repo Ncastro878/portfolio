@@ -1,0 +1,38 @@
+:root {
+	/*
+  *VARIABLES WILL GO HERE
+  */
+	--color-teal: #44499e;
+	--color-teal-dark: #00a79d;
+	--color-mustard: #ed9623;
+	--color-ugly-orange: #e16742;
+	--color-red: #d03a43;
+	--color-red-2:#FF4136;
+
+	--color-sky:#caebf2;
+	--color-carbon:#a9a9a9;
+	--color-watermelon:#ff3b3f;
+	--color-neutral:#efefef;
+}
+/*This is my CSS Reset!*/
+* {
+	padding: 0;
+	margin: 0;
+}
+*,
+*::after,
+*::before {
+	box-sizing: inherit;
+}
+html {
+	box-sizing: border-box;
+	font-size: 10px; // or 62.5% of 16px
+}
+body {
+	font-family: "Roboto", "Open Sans", sans-serif; // or "Roboto"
+	font-weight: 400; //copied from truillo site
+	line-height: 1.6;
+	min-height: 100vh;
+	//background-color: var(--color-grey-1);
+	background-color: rgba(#999, 0.25);
+}
